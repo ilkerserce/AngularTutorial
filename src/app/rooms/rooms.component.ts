@@ -38,7 +38,7 @@ export class RoomsComponent implements OnInit {
       photos: 'https://image.unsplash.com/photo-1518791841217-8f162fle1131',
       checkinTime: new Date('11-Nov-2021'),
       checkoutDate: new Date('12-Nov-2021'),
-      rating: "3.923232",
+      rating: "3.9",
     },
     {
       roomNumber: 3,
@@ -49,8 +49,8 @@ export class RoomsComponent implements OnInit {
       checkinTime: new Date('11-Nov-2021'),
       checkoutDate: new Date('12-Nov-2021'),
       rating: "4.5",
-    },
-  ];;
+    }
+  ];
 
   constructor() { }
 
