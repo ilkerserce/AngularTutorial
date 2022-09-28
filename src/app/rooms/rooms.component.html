@@ -1,5 +1,3 @@
-<p>rooms works!</p>
-
 <h1>Welcome to {{hotelName}}</h1>
 <div [hidden]="hideRooms">
   Number of rooms:
@@ -10,7 +8,31 @@
 
 
 <div *ngIf="rooms.availableRooms > 0">
-<app-rooms-list></app-rooms-list>
+  <!-- <app-rooms-list [rooms]="roomList"></app-rooms-list> -->
+  <table class="table">
+    <tr>
+      <th>Index</th>
+      <th>Even/Odd</th>
+      <th>Room Number</th>
+      <th>Room Type</th>
+      <th>Room Price</th>
+      <th>Room Amenities</th>
+      <th>Checkin Time</th>
+      <th>Rating</th>
+    </tr>
+    <tr [ngClass]="e ? 'even' : 'odd'" 
+    *ngFor="let room of roomList; let e = even; let o = odd; let i = index" ;
+    >
+      <td>{{i }}</td>
+      <td>{{ e ? "Even" : "Odd" }}</td>
+      <td>{{ room.roomNumber }}</td>
+      <td>{{ room.roomType }}</td>
+      <td>{{ room.price }}</td>
+      <td>{{ room.amenities }}</td>
+      <td>{{ room.checkinTime }}</td>
+      <td>{{ room.rating }}</td>
+    </tr>
+  </table>
 </div>
 
 <button (click)="toggle()">Toogle</button>

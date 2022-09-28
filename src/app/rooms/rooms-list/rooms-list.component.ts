@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component,Input, OnInit  } from '@angular/core';
 import { RoomList } from '../rooms';
 
 @Component({
@@ -8,8 +8,7 @@ import { RoomList } from '../rooms';
 })
 export class RoomsListComponent implements OnInit {
 
-@Input() room: RoomList[] = [];
-roomList: any;
+
 
   constructor() { }
 
